@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-content: center;
+  height: 600px;
+  position: relative;
+}
+
+main .main__playboard {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 3rem 5rem rgb(0 0 0 / 25%);
+  background-color: rgba(233, 212, 90, 0.4);
+  overflow: hidden;
+}
+.main__playboard .player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 120px;
+  transition: all 0.75s;
+}
+.main__playboard .player-active {
+  background-color: rgba(233, 212, 90, 0.7);
+}
+.main__playboard .player__name {
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.main__playboard .player__score {
+  color: #6b930d;
+  font-size: 90px;
+  margin-bottom: auto;
+}
+.main__playboard .player__carrent {
+  border-radius: 10px;
+  background-color: #6b930d;
+  color: rgb(34, 0, 172);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-bottom: 16px;
+  width: 215px;
+  padding: 15px;
+}
+.main__playboard .player__carrent-label {
+  margin-bottom: 10px;
+}
+
+.additional-btns .hidden {
+  display: none;
+}
+.additional-btns .dice-img {
+  height: 110px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2rem 5rem rgb(0 0 0 / 10%);
+}
+.additional-btns .btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(245, 140, 20);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 1.75rem 3.5rem rgb(0 0 0 / 10%);
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.2s;
+}
+.additional-btns .btn-new {
+  top: 35px;
+}
+.additional-btns .btn-roll {
+  top: 400px;
+}
+.additional-btns .btn-hold {
+  top: 485px;
+}
+
+/** for the game winner */
+.game-winner {
+  background-color: rgba(128, 34, 182, 0.7);
+}
+
+.game-winner .player__name {
+  color: #6b930d;
+}
